@@ -1,0 +1,58 @@
+ <!--# Name: Samantha Adorno
+# KUID: 3147214
+# LAB Assignment: 06
+# Description: Verifies 2 passwords are longer than 8 characters and are the same
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Password Verification</h1>
+
+    <input type="password" id="password1" placeholder="Enter Password"><br>
+    <input type="password" id="password2" placeholder="Confirm Password"><br>
+    <button onclick="verifyPassword()">Verify</button>
+
+    <script>
+        function verifyPassword() {
+            const password1 = document.getElementById('password1').value;
+            const password2 = document.getElementById('password2').value;
+
+            if (password1.length < 8) {
+                alert('Password must be at least 8 characters long.');
+            } else if (password1 !== password2) {
+                alert('Passwords do not match.');
+            } else {
+                alert('Passwords match!');
+            }
+        }
+    </script>
+
+</body>
+</html>
